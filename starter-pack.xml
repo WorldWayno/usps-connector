@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSysDefinitionBase xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <SysDefinitionBase xmlns:d2p1="http://schemas.datacontract.org/2004/07/Scribe.Core.Mapping.AdvSys" i:type="d2p1:AdvSysDefinition">
+    <Description>Retreive US address data from CRM, validate with USPS and Entg</Description>
+    <Enabled>true</Enabled>
+    <Id>b04dab8f-7a94-4ead-858e-a37d028e65b9</Id>
+    <IsDeleted>false</IsDeleted>
+    <LastModificationDate>2016-01-07T19:56:19.8469197Z</LastModificationDate>
+    <LastRunDate>1753-01-01T00:00:00</LastRunDate>
+    <Name>Enrich Address Data from USPS</Name>
+    <ProcessDefinitionDbId>b04dab8f-7a94-4ead-858e-a37d028e65b9</ProcessDefinitionDbId>
+    <RelNameInformationLookup xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    <SourceConnectionId>2c4ea54d-b2bd-4c49-befe-b96983f1ee9a</SourceConnectionId>
+    <SourceConnectionName>CRM Online</SourceConnectionName>
+    <SourceConnectionType>Microsoft Dynamics CRM</SourceConnectionType>
+    <SourceEntity>customeraddress</SourceEntity>
+    <SourcePrimaryKeyPropertyFullNames xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+    <TargetConnectionId>00000000-0000-0000-0000-000000000000</TargetConnectionId>
+    <TargetConnectionInfo xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <d3p1:KeyValueOfguidConnectionInfonKIEa0o7>
+        <d3p1:Key>44c6a057-f8ef-4b60-87db-c46f656e9747</d3p1:Key>
+        <d3p1:Value>
+          <d2p1:ConnectionAlias>QuantumLeapersUSPS</d2p1:ConnectionAlias>
+          <d2p1:ConnectionId>44c6a057-f8ef-4b60-87db-c46f656e9747</d2p1:ConnectionId>
+          <d2p1:ConnectionName>QuantumLeapersUSPS</d2p1:ConnectionName>
+          <d2p1:ConnectionType>USPS Connector</d2p1:ConnectionType>
+        </d3p1:Value>
+      </d3p1:KeyValueOfguidConnectionInfonKIEa0o7>
+    </TargetConnectionInfo>
+    <TargetConnectionName i:nil="true" />
+    <TargetConnectionType i:nil="true" />
+    <Valid>true</Valid>
+    <NetChange>false</NetChange>
+    <NetChangeFieldName i:nil="true" />
+    <Version>2.0</Version>
+    <SourceConnectionAlias>CRMOnline</SourceConnectionAlias>
+    <MapType>IntegrationServicesAdvancedMap</MapType>
+    <d2p1:StartingBlockId>4298b5d8-eb11-4c45-9c20-857409689226</d2p1:StartingBlockId>
+    <d2p1:BlocksDict xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <d3p1:KeyValueOfguidBlocknKIEa0o7>
+        <d3p1:Key>4298b5d8-eb11-4c45-9c20-857409689226</d3p1:Key>
+        <d3p1:Value xmlns:d5p1="http://schemas.datacontract.org/2004/07/Scribe.Core.Mapping.AdvSys.Shapes" i:type="d5p1:QueryBlock">
+          <d2p1:BlockType>Query</d2p1:BlockType>
+          <d2p1:Description i:nil="true" />
+          <d2p1:Height>109</d2p1:Height>
+          <d2p1:Id>4298b5d8-eb11-4c45-9c20-857409689226</d2p1:Id>
+          <d2p1:Name>customeraddress</d2p1:Name>
+          <d2p1:Width>249</d2p1:Width>
+          <d2p1:X>102</d2p1:X>
+          <d2p1:Y>23</d2p1:Y>
+          <d2p1:Category>Source</d2p1:Category>
+          <d2p1:HasBeenDroppedOnce>true</d2p1:HasBeenDroppedOnce>
+          <d2p1:IsActive>true</d2p1:IsActive>
+          <d2p1:IsHidden>false</d2p1:IsHidden>
+          <d2p1:Label>Query CRM Customer Address</d2p1:Label>
+          <d2p1:NextBlockId>c4f17b39-6b64-4ab6-b1e8-84e621f3d0f3</d2p1:NextBlockId>
+          <d2p1:OriginalBlockLabel>Query</d2p1:OriginalBlockLabel>
+          <d2p1:ParentBlockId>00000000-0000-0000-0000-000000000000</d2p1:ParentBlockId>
+          <d2p1:PrevBlockId>00000000-0000-0000-0000-000000000000</d2p1:PrevBlockId>
+          <d5p1:ActionName>Query</d5p1:ActionName>
+          <d5p1:Entity>customeraddress</d5p1:Entity>
+          <d5p1:ConnectionId>2c4ea54d-b2bd-4c49-befe-b96983f1ee9a</d5p1:ConnectionId>
+          <d5p1:FilterItems xmlns:d6p1="http://schemas.datacontract.org/2004/07/Scribe.Core.Mapping" />
+          <d5p1:Relationships xmlns:d6p1="http://schemas.datacontract.org/2004/07/Scribe.Core.Mapping.Sys" />
+        </d3p1:Value>
+      </d3p1:KeyValueOfguidBlocknKIEa0o7>
+      <d3p1:KeyValueOfguidBlocknKIEa0o7>
+        <d3p1:Key>c4f17b39-6b64-4ab6-b1e8-84e621f3d0f3</d3p1:Key>
+        <d3p1:Value xmlns:d5p1="http://schemas.datacontract.org/2004/07/Scribe.Core.Mapping.AdvSys.Shapes" i:type="d5p1:ForEachBlock">
+          <d2p1:BlockType>ForEach</d2p1:BlockType>
+          <d2p1:Description i:nil="true" />
+          <d2p1:Height>483</d2p1:Height>
+          <d2p1:Id>c4f17b39-6b64-4ab6-b1e8-84e621f3d0f3</d2p1:Id>
+          <d2p1:Name>ForEach</d2p1:Name>
+          <d2p1:Width>250</d2p1:Width>
+          <d2p1:X>102</d2p1:X>
+          <d2p1:Y>117</d2p1:Y>
+          <d2p1:Category>Control</d2p1:Category>
+          <d2p1:HasBeenDroppedOnce>true</d2p1:HasBeenDroppedOnce>
+          <d2p1:IsActive>true</d2p1:IsActive>
+          <d2p1:IsHidden>false</d2p1:IsHidden>
+          <d2p1:Label>For Each CRM Customer Address</d2p1:Label>
+          <d2p1:NextBlockId>00000000-0000-0000-0000-000000000000</d2p1:NextBlockId>
+          <d2p1:OriginalBlockLabel>For Each Result</d2p1:OriginalBlockLabel>
+          <d2p1:ParentBlockId>00000000-0000-0000-0000-000000000000</d2p1:ParentBlockId>
+          <d2p1:PrevBlockId>4298b5d8-eb11-4c45-9c20-857409689226</d2p1:PrevBlockId>
+          <d2p1:IsCollapsed>false</d2p1:IsCollapsed>
+          <d2p1:FirstChildBlockId>9526fd16-aecf-4151-b8c0-a49d8203a833</d2p1:FirstChildBlockId>
+          <d5p1:ConnectionId>00000000-0000-0000-0000-000000000000</d5p1:ConnectionId>
+        </d3p1:Value>
+      </d3p1:KeyValueOfguidBlocknKIEa0o7>
+      <d3p1:KeyValueOfguidBlocknKIEa0o7>
+        <d3p1:Key>9526fd16-aecf-4151-b8c0-a49d8203a833</d3p1:Key>
+        <d3p1:Value xmlns:d5p1="http://schemas.datacontract.org/2004/07/Scribe.Core.Mapping.AdvSys.Shapes" i:type="d5p1:LookupBlock">
+          <d2p1:BlockType>Lookup</d2p1:BlockType>
+          <d2p1:Description i:nil="true" />
+          <d2p1:Height>79</d2p1:Height>
+          <d2p1:Id>9526fd16-aecf-4151-b8c0-a49d8203a833</d2p1:Id>
+          <d2p1:Name>ZipCodeLookupResponseLookup</d2p1:Name>
+          <d2p1:Width>249</d2p1:Width>
+          <d2p1:X>128</d2p1:X>
+          <d2p1:Y>181</d2p1:Y>
+          <d2p1:Category>Target</d2p1:Category>
+          <d2p1:HasBeenDroppedOnce>true</d2p1:HasBeenDroppedOnce>
+          <d2p1:IsActive>true</d2p1:IsActive>
+          <d2p1:IsHidden>false</d2p1:IsHidden>
+          <d2p1:Label>Validate Addresss with USPS</d2p1:Label>
+          <d2p1:NextBlockId>1bfd45f6-1d9f-43e7-8aec-bccccdde59cd</d2p1:NextBlockId>
+          <d2p1:OriginalBlockLabel>Lookup</d2p1:OriginalBlockLabel>
+          <d2p1:ParentBlockId>c4f17b39-6b64-4ab6-b1e8-84e621f3d0f3</d2p1:ParentBlockId>
+          <d2p1:PrevBlockId>00000000-0000-0000-0000-000000000000</d2p1:PrevBlockId>
+          <d5p1:ActionName>Query</d5p1:ActionName>
+          <d5p1:Entity>ZipCodeLookupResponse</d5p1:Entity>
+          <d5p1:ConnectionId>44c6a057-f8ef-4b60-87db-c46f656e9747</d5p1:ConnectionId>
+          <d5p1:CacheResults>false</d5p1:CacheResults>
+          <d5p1:FieldsToLookup>
+            <d3p1:string>UnitAptNo</d3p1:string>
+            <d3p1:string>StreetAddress</d3p1:string>
+            <d3p1:string>City</d3p1:string>
+            <d3p1:string>State</d3p1:string>
+            <d3p1:string>Zip4</d3p1:string>
+            <d3p1:string>Zip5</d3p1:string>
+            <d3p1:string>Message</d3p1:string>
+          </d5p1:FieldsToLookup>
+          <d5p1:FilterItems xmlns:d6p1="http://schemas.datacontract.org/2004/07/Scribe.Core.Mapping">
+            <d6p1:FilterItem>
+              <d6p1:CompareValue xmlns:d8p1="http://www.w3.org/2001/XMLSchema" i:type="d8p1:string">"Manchester"</d6p1:CompareValue>
+              <d6p1:ComparisonOperator>Equal</d6p1:ComparisonOperator>
+              <d6p1:FieldName>City</d6p1:FieldName>
+              <d6p1:LogicalOperator>And</d6p1:LogicalOperator>
+            </d6p1:FilterItem>
+            <d6p1:FilterItem>
+              <d6p1:CompareValue xmlns:d8p1="http://www.w3.org/2001/XMLSchema" i:type="d8p1:string">"NH"</d6p1:CompareValue>
+              <d6p1:ComparisonOperator>Equal</d6p1:ComparisonOperator>
+              <d6p1:FieldName>State</d6p1:FieldName>
+              <d6p1:LogicalOperator>And</d6p1:LogicalOperator>
+            </d6p1:FilterItem>
+            <d6p1:FilterItem>
+              <d6p1:CompareValue xmlns:d8p1="http://www.w3.org/2001/XMLSchema" i:type="d8p1:string">"1750 Elm Street"</d6p1:CompareValue>
+              <d6p1:ComparisonOperator>Equal</d6p1:ComparisonOperator>
+              <d6p1:FieldName>StreetAddress</d6p1:FieldName>
+              <d6p1:LogicalOperator>And</d6p1:LogicalOperator>
+            </d6p1:FilterItem>
+          </d5p1:FilterItems>
+          <d5p1:IsOnErrorMessage>true</d5p1:IsOnErrorMessage>
+          <d5p1:IsOnMoreThanOneMessage>false</d5p1:IsOnMoreThanOneMessage>
+          <d5p1:IsOnNoMatchMessage>false</d5p1:IsOnNoMatchMessage>
+          <d5p1:IsOnOneOrMoreMessage>false</d5p1:IsOnOneOrMoreMessage>
+          <d5p1:OnErrorMessage>Operation failed.  Label: [BLOCK LABEL], Name: [BLOCK NAME], Message: [ORIGINAL MESSAGE]</d5p1:OnErrorMessage>
+          <d5p1:OnMoreThanOneMessage>Operation returned more than 1 result.  Label: [BLOCK LABEL], Name: [BLOCK NAME]</d5p1:OnMoreThanOneMessage>
+          <d5p1:OnNoMatchMessage>Operation returned no results.  Label: [BLOCK LABEL], Name: [BLOCK NAME]</d5p1:OnNoMatchMessage>
+          <d5p1:OnOneOrMoreMessage>Operation returned 1 or more results.  Label: [BLOCK LABEL], Name: [BLOCK NAME]</d5p1:OnOneOrMoreMessage>
+        </d3p1:Value>
+      </d3p1:KeyValueOfguidBlocknKIEa0o7>
+      <d3p1:KeyValueOfguidBlocknKIEa0o7>
+        <d3p1:Key>e87ab1d7-328f-40fa-bdda-6335555a5c95</d3p1:Key>
+        <d3p1:Value xmlns:d5p1="http://schemas.datacontract.org/2004/07/Scribe.Core.Mapping.AdvSys.Shapes" i:type="d5p1:UpdateBlock">
+          <d2p1:BlockType>Update</d2p1:BlockType>
+          <d2p1:Description i:nil="true" />
+          <d2p1:Height>79</d2p1:Height>
+          <d2p1:Id>e87ab1d7-328f-40fa-bdda-6335555a5c95</d2p1:Id>
+          <d2p1:Name>customeraddressUpdate</d2p1:Name>
+          <d2p1:Width>249</d2p1:Width>
+          <d2p1:X>154</d2p1:X>
+          <d2p1:Y>309</d2p1:Y>
+          <d2p1:Category>Source</d2p1:Category>
+          <d2p1:HasBeenDroppedOnce>true</d2p1:HasBeenDroppedOnce>
+          <d2p1:IsActive>true</d2p1:IsActive>
+          <d2p1:IsHidden>false</d2p1:IsHidden>
+          <d2p1:Label>Enrich CRM Customer Address Data</d2p1:Label>
+          <d2p1:NextBlockId>00000000-0000-0000-0000-000000000000</d2p1:NextBlockId>
+          <d2p1:OriginalBlockLabel>Update</d2p1:OriginalBlockLabel>
+          <d2p1:ParentBlockId>1bfd45f6-1d9f-43e7-8aec-bccccdde59cd</d2p1:ParentBlockId>
+          <d2p1:PrevBlockId>00000000-0000-0000-0000-000000000000</d2p1:PrevBlockId>
+          <d5p1:ActionName>Update</d5p1:ActionName>
+          <d5p1:Entity>customeraddress</d5p1:Entity>
+          <d5p1:ConnectionId>2c4ea54d-b2bd-4c49-befe-b96983f1ee9a</d5p1:ConnectionId>
+          <d5p1:IsOnErrorMessage>true</d5p1:IsOnErrorMessage>
+          <d5p1:OnErrorMessage>Operation failed.  Label: [BLOCK LABEL], Name: [BLOCK NAME], Message: [ORIGINAL MESSAGE]</d5p1:OnErrorMessage>
+          <d5p1:IsOnNoMatchMessage>true</d5p1:IsOnNoMatchMessage>
+          <d5p1:OnNoMatchMessage>Operation returned no results.  Label: [BLOCK LABEL], Name: [BLOCK NAME]</d5p1:OnNoMatchMessage>
+          <d5p1:FieldMappings xmlns:d6p1="http://schemas.datacontract.org/2004/07/Scribe.Core.Mapping.Sys">
+            <d6p1:MapBinding>
+              <d6p1:TargetField>city</d6p1:TargetField>
+              <d6p1:TargetFormula>QuantumLeapersUSPS_ZipCodeLookupResponseLookup.City</d6p1:TargetFormula>
+              <d6p1:TargetDataType i:nil="true" />
+            </d6p1:MapBinding>
+            <d6p1:MapBinding>
+              <d6p1:TargetField>stateorprovince</d6p1:TargetField>
+              <d6p1:TargetFormula>QuantumLeapersUSPS_ZipCodeLookupResponseLookup.State</d6p1:TargetFormula>
+              <d6p1:TargetDataType i:nil="true" />
+            </d6p1:MapBinding>
+            <d6p1:MapBinding>
+              <d6p1:TargetField>line1</d6p1:TargetField>
+              <d6p1:TargetFormula>QuantumLeapersUSPS_ZipCodeLookupResponseLookup.StreetAddress</d6p1:TargetFormula>
+              <d6p1:TargetDataType i:nil="true" />
+            </d6p1:MapBinding>
+            <d6p1:MapBinding>
+              <d6p1:TargetField>line2</d6p1:TargetField>
+              <d6p1:TargetFormula>QuantumLeapersUSPS_ZipCodeLookupResponseLookup.UnitAptNo</d6p1:TargetFormula>
+              <d6p1:TargetDataType i:nil="true" />
+            </d6p1:MapBinding>
+            <d6p1:MapBinding>
+              <d6p1:TargetField>postalcode</d6p1:TargetField>
+              <d6p1:TargetFormula>QuantumLeapersUSPS_ZipCodeLookupResponseLookup.Zip5 &amp; "-" &amp; QuantumLeapersUSPS_ZipCodeLookupResponseLookup.Zip4</d6p1:TargetFormula>
+              <d6p1:TargetDataType i:nil="true" />
+            </d6p1:MapBinding>
+          </d5p1:FieldMappings>
+          <d5p1:UseBulk>false</d5p1:UseBulk>
+          <d5p1:BulkCountPerOperation>2000</d5p1:BulkCountPerOperation>
+          <d5p1:FilterItems xmlns:d6p1="http://schemas.datacontract.org/2004/07/Scribe.Core.Mapping">
+            <d6p1:FilterItem>
+              <d6p1:CompareValue xmlns:d8p1="http://www.w3.org/2001/XMLSchema" i:type="d8p1:string">customeraddress.customeraddressid</d6p1:CompareValue>
+              <d6p1:ComparisonOperator>Equal</d6p1:ComparisonOperator>
+              <d6p1:FieldName>customeraddressid</d6p1:FieldName>
+              <d6p1:LogicalOperator>And</d6p1:LogicalOperator>
+            </d6p1:FilterItem>
+          </d5p1:FilterItems>
+        </d3p1:Value>
+      </d3p1:KeyValueOfguidBlocknKIEa0o7>
+      <d3p1:KeyValueOfguidBlocknKIEa0o7>
+        <d3p1:Key>1bfd45f6-1d9f-43e7-8aec-bccccdde59cd</d3p1:Key>
+        <d3p1:Value xmlns:d5p1="http://schemas.datacontract.org/2004/07/Scribe.Core.Mapping.AdvSys.Shapes" i:type="d5p1:IfElseBlock">
+          <d2p1:BlockType>IfElse</d2p1:BlockType>
+          <d2p1:Description i:nil="true" />
+          <d2p1:Height>275</d2p1:Height>
+          <d2p1:Id>1bfd45f6-1d9f-43e7-8aec-bccccdde59cd</d2p1:Id>
+          <d2p1:Name>IfElse</d2p1:Name>
+          <d2p1:Width>249</d2p1:Width>
+          <d2p1:X>128</d2p1:X>
+          <d2p1:Y>245</d2p1:Y>
+          <d2p1:Category>Control</d2p1:Category>
+          <d2p1:HasBeenDroppedOnce>true</d2p1:HasBeenDroppedOnce>
+          <d2p1:IsActive>true</d2p1:IsActive>
+          <d2p1:IsHidden>false</d2p1:IsHidden>
+          <d2p1:Label>If the address was validated...</d2p1:Label>
+          <d2p1:NextBlockId>00000000-0000-0000-0000-000000000000</d2p1:NextBlockId>
+          <d2p1:OriginalBlockLabel>If</d2p1:OriginalBlockLabel>
+          <d2p1:ParentBlockId>c4f17b39-6b64-4ab6-b1e8-84e621f3d0f3</d2p1:ParentBlockId>
+          <d2p1:PrevBlockId>9526fd16-aecf-4151-b8c0-a49d8203a833</d2p1:PrevBlockId>
+          <d2p1:IsCollapsed>false</d2p1:IsCollapsed>
+          <d2p1:FirstChildBlockContainer1Id>e87ab1d7-328f-40fa-bdda-6335555a5c95</d2p1:FirstChildBlockContainer1Id>
+          <d2p1:FirstChildBlockContainer2Id>a96aa3ce-f17f-41c8-8d4c-9b3d3eabe9f8</d2p1:FirstChildBlockContainer2Id>
+          <d2p1:HeightOfZone1>53</d2p1:HeightOfZone1>
+          <d2p1:HeightOfZone2>53</d2p1:HeightOfZone2>
+          <d5p1:ExpressionItems xmlns:d6p1="http://schemas.datacontract.org/2004/07/Scribe.Core.Mapping">
+            <d6p1:ExpressionItem>
+              <d6p1:ConditionOperator>Equal</d6p1:ConditionOperator>
+              <d6p1:LeftExpression>QuantumLeapersUSPS_ZipCodeLookupResponseLookup.Result.RecordsMatched</d6p1:LeftExpression>
+              <d6p1:LogicalOperator>And</d6p1:LogicalOperator>
+              <d6p1:RightExpression>1</d6p1:RightExpression>
+            </d6p1:ExpressionItem>
+          </d5p1:ExpressionItems>
+          <d5p1:ElseLabel>else</d5p1:ElseLabel>
+        </d3p1:Value>
+      </d3p1:KeyValueOfguidBlocknKIEa0o7>
+      <d3p1:KeyValueOfguidBlocknKIEa0o7>
+        <d3p1:Key>a96aa3ce-f17f-41c8-8d4c-9b3d3eabe9f8</d3p1:Key>
+        <d3p1:Value xmlns:d5p1="http://schemas.datacontract.org/2004/07/Scribe.Core.Mapping.AdvSys.Shapes" i:type="d5p1:CommentBlock">
+          <d2p1:BlockType>Comment</d2p1:BlockType>
+          <d2p1:Description i:nil="true" />
+          <d2p1:Height>79</d2p1:Height>
+          <d2p1:Id>a96aa3ce-f17f-41c8-8d4c-9b3d3eabe9f8</d2p1:Id>
+          <d2p1:Name>Comment</d2p1:Name>
+          <d2p1:Width>249</d2p1:Width>
+          <d2p1:X>154</d2p1:X>
+          <d2p1:Y>407</d2p1:Y>
+          <d2p1:Category>Documentation</d2p1:Category>
+          <d2p1:HasBeenDroppedOnce>true</d2p1:HasBeenDroppedOnce>
+          <d2p1:IsActive>true</d2p1:IsActive>
+          <d2p1:IsHidden>false</d2p1:IsHidden>
+          <d2p1:Label>Continue Processing</d2p1:Label>
+          <d2p1:NextBlockId>00000000-0000-0000-0000-000000000000</d2p1:NextBlockId>
+          <d2p1:OriginalBlockLabel>Comment</d2p1:OriginalBlockLabel>
+          <d2p1:ParentBlockId>1bfd45f6-1d9f-43e7-8aec-bccccdde59cd</d2p1:ParentBlockId>
+          <d2p1:PrevBlockId>00000000-0000-0000-0000-000000000000</d2p1:PrevBlockId>
+          <d5p1:ConnectionId>00000000-0000-0000-0000-000000000000</d5p1:ConnectionId>
+        </d3p1:Value>
+      </d3p1:KeyValueOfguidBlocknKIEa0o7>
+    </d2p1:BlocksDict>
+  </SysDefinitionBase>
+</ArrayOfSysDefinitionBase>
